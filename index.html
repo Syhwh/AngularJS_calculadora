@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Calculadora">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos/css/styles.css">
+</head>
+
+<body ng-controller="CalculadoraCtrl">
+  
+    
+  <main>
+    <div class="display">
+        <div>
+        <input id="digitos"    type="text"  ng-model="digitos" disabled>
+        </div>
+        <div>
+        <input id="respuesta" type="text"  ng-model="respuesta" disabled>
+        </div>
+    </div>
+<div class="container">
+    <div class="numeros">
+        <div class="caja" ><button class="boton n7" ng-click="agregar(7)">7</button></div>
+        
+        <div class="caja" ><button class="boton n8" ng-click="agregar(8)">8</button></div>
+        <div class="caja" ><button class="boton n9" ng-click="agregar(9)">9</button></div>
+        
+        <div class="caja" ><button class="boton n4" ng-click="agregar(4)">4</button></div>
+        
+        <div class="caja" ><button class="boton n5" ng-click="agregar(5)">5</button></div>
+        <div class="caja" ><button class="boton n6" ng-click="agregar(6)">6</button></div>
+        
+        <div class="caja" ><button class="boton n1" ng-click="agregar(1)">1</button></div>
+        
+        <div class="caja" ><button class="boton n2" ng-click="agregar(2)">2</button></div>
+        
+        <div class="caja" ><button class="boton n3" ng-click="agregar(3)">3</button></div>
+        
+        <div class="caja n10" ><button class="boton n0" ng-click="agregar(0)">0</button></div>
+        <div class="caja" ><button class="boton punto" ng-click="agregar('.')">.</button></div>
+        <div class="caja operador"><button class="boton" id="igual" ng-click="resultado()">=</button></div>
+    </div>
+    <div class="operadores">
+        <div class="caja operador"><button class="boton" id="resta" ng-click="agregar('-')">-</button></div>
+        <div class="caja operador"><button class="boton" id="multiplica" ng-click="agregar('*')">*</button></div>
+        <div class="caja operador"><button class="boton" id="suma" ng-click="agregar('+')" >+</button></div>
+        <div class="caja operador"><button class="boton" id="divide" ng-click="agregar('/')" >/</button></div>
+        <div class="caja operador"><button class="boton" id="reset" ng-click="reset()">C</button></div>
+    </div>
+</div>
+</main>
+    
+</body>
+</html>

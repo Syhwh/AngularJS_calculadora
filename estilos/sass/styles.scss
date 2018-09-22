@@ -1,0 +1,120 @@
+body{
+    background: #bdc3c7; 
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); 
+}
+/* estilos de botones*/
+$boton-width:50px;
+$boton-height:50px;
+$boton-background-color: rgba(214,214,214,1);
+$boton-background-filter: filter-gradient(#d6d6d6, #c7c7c7, horizontal);
+$boton-background-image: background-image(linear-gradient(left bottom, rgba(214,214,214,1) 0%, rgba(207,207,207,1) 47%, rgba(199,199,199,1) 100%));
+$boton-shadow: 0px 0px 64px -3px rgba(138,136,138,1);
+
+/* estilos main general*/
+$main-background-color: rgba(173,173,173,1);
+$main-background-filter:filter-gradient(#adadad, #c2c2c2, horizontal);
+$main-background-image: background-image(linear-gradient(left bottom, rgba(173,173,173,1) 0%, rgba(166,166,166,1) 50%, rgba(158,158,158,1) 51%, rgba(194,194,194,1) 100%));
+
+
+/*Estilo grid numeros*/
+$grilla_col_boton:3;
+$separacion_numeros:15px;
+$ancho_container_num:$boton-width*$grilla_col_boton + ($separacion_numeros*2);
+/*Estilo grid operadores*/
+$grilla_col_oper:1;
+$separacion_oper:15px;
+$ancho_container_oper:$boton-width*$grilla_col_oper;
+
+
+main{
+    
+    border:3px solid red;
+    width: 260px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    box-shadow: 1px 3px 24px 1px rgba(0,0,0,0.94);
+    border: 5px solid  rgba(214,214,214,1);
+    border-radius: 28px;
+    
+    margin-top: 50px;
+
+    background-color:$main-background-color;
+    background: $main-background-filter;
+    background: $main-background-image;
+
+}
+
+.display{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr;
+    padding: none;
+    border: 1px solid gray;
+    text-align: center;
+}
+input {
+    text-align: right;
+    width:256px;
+    height: 30px;
+    border: none;
+}
+#respuesta{
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
+    grid-gap: $separacion_numeros;
+    margin-left: 5px;
+}
+
+.numeros{
+    display: grid;
+    width: $ancho_container_num;
+    grid-template: repeat(5,$boton-width)/repeat($grilla_col_boton,$boton-width);
+    grid-gap:$separacion_numeros;
+     
+}
+ .n10{
+    grid-column-start: 1;
+    grid-column-end: 3;
+   
+}
+.caja .n0{
+    width: 115px;
+}
+.caja #igual{
+    width: 180px;
+}
+
+.boton{
+    display: grid;
+    width: $boton-width;
+    height: $boton-height;
+    border: 1px solid ; 
+    background: gray; 
+    border-radius: 6px;  
+    box-shadow: $boton-shadow;
+    background-color:$boton-background-color;
+    background: $boton-background-filter;
+    background:$boton-background-image;
+    font-weight: bold;
+}
+.operadores{
+    display: grid;
+    grid-gap: $separacion_numeros;
+    padding: 0px;
+    width: $ancho_container_oper;
+    
+}
+
+.boton:hover{
+    background-color: rgb(231, 231, 218);
+}
+
